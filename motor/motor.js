@@ -36,9 +36,7 @@ const getFecha = (fechaPrimerEmpleo) =>{
     // obtener la fecha actual
     const fechaActual = new Date();
     // calcular la diferencia en meses
-    const meses = (fechaActual.getFullYear() - fecha.getFullYear()) * 12 + (fechaActual.getMonth() - fecha.getMonth());
-    // console.log(meses);
-    return meses
+    return (fechaActual.getFullYear() - fecha.getFullYear()) * 12 + (fechaActual.getMonth() - fecha.getMonth());
 }
     
     
@@ -99,9 +97,6 @@ const calculoMotor = (tipoNomina,fechaPrimerEmpleo, genero) => {
     p1 = resultado.montoMinimo + Math.sqrt(resultado.montoMaximo - resultado.montoMinimo)
     p2 = resultado.montoMinimo + 0.0175 * (resultado.montoMaximo - resultado.montoMinimo)
     resultado.recomendacionLinea = Math.max(p1,p2)
-    console.log(`El resultado de p1 es ${p1}`)
-    console.log(`El resultado de p2 es ${p2}`)
-    console.log(`Meses: ${meses}`)
     return resultado
 }
 
